@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Penyewa extends Model
 {
     use HasFactory;
+
+    protected $fillable =[
+        'nama',
+        'alamat',
+        'tanggal',
+        'plat_nomor',
+        'jenis_mobil',
+        'harga',
+
+    ];
 }

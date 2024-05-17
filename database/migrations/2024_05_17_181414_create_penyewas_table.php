@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('tanggal');
-            $table->string('plat_nomer');
+            $table->string('plat_nomor');
             $table->string('jenis_mobil');
             $table->string('harga');
             $table->timestamps();
