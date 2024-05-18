@@ -29,7 +29,7 @@ class SewaController extends Controller
     {
         Penyewa::create($request->all());
 
-        return redirect()->route('penyewas')->with('succes');
+        return redirect()->route('penyewas')->with('success','Penyewa Berhasil Ditambahkan');
     }
 
     /**
