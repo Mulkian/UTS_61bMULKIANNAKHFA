@@ -5,7 +5,7 @@
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Daftar Penyewa</h1>
-        <a href="" class="btn btn-primary">Tambah Penyewa</a>
+        <a href="{{ route('penyewas.create')}}" class="btn btn-primary">Tambah Penyewa</a>
     </div>
     <hr />
     @if(Session::has('success'))

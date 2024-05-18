@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
     Route::controller(SewaController::class)->prefix('penyewas')->group(function () {
         Route::get('', 'index')->name('penyewas');
+        Route::get('create', 'create')->name('penyewas.create');
     });
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });

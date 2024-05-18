@@ -19,7 +19,7 @@ class SewaController extends Controller
      */
     public function create()
     {
-        //
+        return view('penyewas.create');
     }
 
     /**
