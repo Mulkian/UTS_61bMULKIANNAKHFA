@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
         Route::get('', 'index')->name('penyewas');
         Route::get('create', 'create')->name('penyewas.create');
         Route::post('store', 'store')->name('penyewas.store');
+        Route::get('show/{id}', 'show')->name('penyewas.show');
     });
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });

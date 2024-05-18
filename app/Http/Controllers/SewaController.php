@@ -39,7 +39,9 @@ class SewaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $penyewa = Penyewa::findOrFail($id);
+
+        return view('penyewas.show', compact('penyewa'));
     }
 
     /**

@@ -19,14 +19,14 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('penyewas') }}">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-fw fa-users"></i>
           <span>Penyewa</span></a>
       </li>
 
 
     <li class="nav-item">
       <a class="nav-link" href="/profile">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-users"></i>
         <span>Profile</span></a>
     </li>
 
