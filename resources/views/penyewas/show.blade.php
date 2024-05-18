@@ -24,11 +24,10 @@
             <label class="form-label">Jenis Mobil</label>
             <input type="text" name="jenis_mobil" class="form-control" placeholder="Jenis Mobil" value="{{ $penyewa->jenis_mobil }}" readonly>
         </div>
-        <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">Harga</label>
-                <input type="text" name="harga" class="form-control" placeholder="Harga" value="{{ $penyewa->harga }}" readonly>
-            </div>
+        <div class="col mb-3">
+            <label class="form-label">Harga</label>
+            <input type="text" name="harga" class="form-control" placeholder="Harga" value="{{ $penyewa->harga }}" readonly>
+        </div>
     </div>
     <div class="row">
         <div class="col mb-3">
@@ -40,5 +39,4 @@
             <input type="text" name="updated_at" class="form-control" placeholder="Updated At" value="{{ $penyewa->updated_at }}" readonly>
         </div>
     </div>
-
 @endsection
