@@ -13,7 +13,7 @@ class Penyewa extends Model
         'nama',
         'alamat',
         'tanggal',
-        'plat_nomor',
+        'plat_nomer',
         'jenis_mobil',
         'harga',
 

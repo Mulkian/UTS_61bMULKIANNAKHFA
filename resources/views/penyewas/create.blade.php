@@ -5,7 +5,7 @@
 @section('contents')
     <h1 class="mb-0"></h1>
     <hr />
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('penyewas.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mb-3">
             <div class="col">
@@ -33,8 +33,8 @@
 
             <style>
                 .btn-small {
-                    padding: 8px 8px; /* Anda dapat menyesuaikan padding sesuai kebutuhan */
-                    font-size: 14px; /* Ukuran font juga dapat disesuaikan */
+                    padding: 8px 8px;
+                    font-size: 14px;
                 }
             </style>
 

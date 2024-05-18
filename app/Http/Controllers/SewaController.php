@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Penyewa;
 class SewaController extends Controller
 {
     /**
@@ -27,7 +27,9 @@ class SewaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Penyewa::create($request->all());
+
+        return redirect()->route('penyewas')->with('succes');
     }
 
     /**

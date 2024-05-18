@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::controller(SewaController::class)->prefix('penyewas')->group(function () {
         Route::get('', 'index')->name('penyewas');
         Route::get('create', 'create')->name('penyewas.create');
+        Route::post('store', 'store')->name('penyewas.store');
     });
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });
