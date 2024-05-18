@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SewaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,5 +22,10 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
+    Route::controller(SewaController::class)->prefix('penyewas')->group(function () {
+        Route::get('', 'index')->name('penyewas');
+    });
+    Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });
+
+
