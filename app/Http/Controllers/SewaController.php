@@ -49,7 +49,9 @@ class SewaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $penyewa = Penyewa::findOrFail($id);
+
+        return view('penyewas.edit', compact('penyewa'));
     }
 
     /**
@@ -57,7 +59,11 @@ class SewaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $penyewa = Penyewa::findOrFail($id);
+
+        $penyewa->update($request->all());
+
+        return redirect()->route('penyewas')->with('success', 'Penyewa Berhasil Di Ubah');
     }
 
     /**
