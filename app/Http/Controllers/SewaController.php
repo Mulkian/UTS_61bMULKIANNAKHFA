@@ -71,6 +71,10 @@ class SewaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $penyewa = Penyewa::findOrFail($id);
+
+        $penyewa->delete();
+
+        return redirect()->route('penyewas')->with('success', 'Penyewa Berhasil Di Hapus');
     }
 }

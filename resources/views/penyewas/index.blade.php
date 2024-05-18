@@ -42,9 +42,12 @@
 
                             <a href="{{ route('penyewas.show', $rs->id) }}" type="button" class="btn btn-secondary">Detail</a>
                             <a href="{{ route('penyewas.edit', $rs->id) }}" type="button" class="btn btn-warning">Edit</a>
-                                
+                            <form action="{{ route('penyewas.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger m-0">Hapus</button>
 
-                                    <button class="btn btn-danger m-0">Hapus</button>
+
                                 </form>
                             </div>
                         </td>

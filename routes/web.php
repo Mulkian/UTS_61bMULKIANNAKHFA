@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
         Route::get('show/{id}', 'show')->name('penyewas.show');
         Route::get('edit/{id}', 'edit')->name('penyewas.edit');
         Route::put('edit/{id}', 'update')->name('penyewas.update');
+        Route::delete('destroy/{id}', 'destroy')->name('penyewas.destroy');
 
     });
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
