@@ -11,7 +11,9 @@ class SewaController extends Controller
      */
     public function index()
     {
-        return view('penyewas.index');
+        $penyewa = Penyewa::orderBy('created_at', 'DESC')->get();
+
+        return view('penyewas.index', compact('penyewa'));
     }
 
     /**

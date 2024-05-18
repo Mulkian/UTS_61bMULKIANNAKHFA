@@ -26,6 +26,35 @@
                 <th>Action</th>
             </tr>
         </thead>
+        <tbody>+
+            @if($penyewa->count() > 0)
+                @foreach($penyewa as $rs)
+                    <tr>
+                        <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle">{{ $rs->nama }}</td>
+                        <td class="align-middle">{{ $rs->alamat}}</td>
+                        <td class="align-middle">{{ $rs->tanggal }}</td>
+                        <td class="align-middle">{{ $rs->plat_nomer }}</td>
+                        <td class="align-middle">{{ $rs->jenis_mobil }}</td>
+                        <td class="align-middle">{{ $rs->harga }}</td>
+                        <td class="align-middle">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="" type="button" class="btn btn-secondary">Detail</a>
+                                <a href="" type="button" class="btn btn-warning">Edit</a>
+
+                                  
+                                    <button class="btn btn-danger m-0">Delete</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+            @else
+                <tr>
+                    <td class="text-center" colspan="5">Product not found</td>
+                </tr>
+            @endif
+        </tbody>
 
     </table>
 @endsection
